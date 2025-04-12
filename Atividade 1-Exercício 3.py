@@ -11,7 +11,7 @@ def dU(x):
 
 # Parâmetros
 x = 2.0                 # Valor inicial
-alpha = 0.01            # Taxa de aprendizado (experimente outros valores!)
+alpha = 0.09           # Taxa de aprendizado (experimente outros valores!)
 epsilon = 0.001         # Critério de parada
 max_iter = 1000
 
