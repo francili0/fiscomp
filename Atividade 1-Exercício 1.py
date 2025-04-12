@@ -60,7 +60,7 @@ def grad_U(x, y):
     return dU_dx, dU_dy
 
 # Hiperparâmetros
-alpha = 0.1
+alpha = 0.5
 max_iter = 200
 epsilon = 1e-5
 x, y = 2.5, 1.5  # Posição inicial
