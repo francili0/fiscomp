@@ -1,17 +1,20 @@
-# 📘 FisComp - Física Computacional +++=+++
+# 📘 FisComp - Simulações, Algoritmos e Redes Neurais com Python
 
-Bem-vindo ao **FisComp**! Este repositório contém projetos educacionais desenvolvidos em **Python**, combinando:
+Este repositório reúne projetos educacionais desenvolvidos em **Python**, abordando:
 
-- 🧪 Simulações de Física Clássica___
-- 🤖 Redes Neurais construídas do zero com NumPy
+- 🔬 Simulações de Física Clássica
+- 📉 Algoritmos Numéricos (como o Método de Metropolis e Gradiente Descendente)
+- 🤖 Redes Neurais implementadas do zero com **NumPy**
 
-O foco é o aprendizado prático de conceitos científicos e computacionais, com código claro, modular e comentado.
+O objetivo é oferecer implementações simples e didáticas, voltadas para aprendizado e experimentação computacional.
 
 ---
 
-## 🚀 Simulações de Física
+## 🔬 Simulações de Física Clássica
+
+Projetos que exploram conceitos fundamentais da física por meio de simulações visuais e interativas.
 
 ### 🎯 Lançamento Oblíquo
 
-Simula a trajetória de um projétil lançado com velocidade e ângulo iniciais, considerando a gravidade e decomposição vetorial. 
+Simula o movimento de um projétil sob influência da gravidade, com controle de parâmetros como velocidade e ângulo inicial.
 
