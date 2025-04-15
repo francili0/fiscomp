@@ -10,7 +10,7 @@ def dU(x):
 
 # Parâmetros
 x = 5.0                   # Posição inicial
-alpha = 0.1               # Taxa de aprendizado
+alpha = 0.9               # Taxa de aprendizado
 epsilon = 0.01            # Tolerância
 max_iter = 1000           # Número máximo de iterações
 

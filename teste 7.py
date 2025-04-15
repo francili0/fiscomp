@@ -156,3 +156,16 @@ plt.xlabel('Tempo (s)')
 plt.ylabel('Energia (J)')
 plt.legend()
 plt.show ()
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 5, 100)
+y = np.tanh(x)
+
+plt.plot(x, y)
+plt.title("Função tanh")
+plt.grid(True)
+plt.axhline(0, color='gray', linestyle='--')
+plt.axvline(0, color='gray', linestyle='--')
+plt.show()
