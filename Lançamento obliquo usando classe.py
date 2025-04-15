@@ -41,7 +41,7 @@ class Particula:
 # ===== EXEMPLO DE USO =====
 
 # Criando uma partícula na posição (0, 0), com velocidade (1, 1) e massa 2
-p = Particula(x=0, y=0, vx=1, vy=1, massa=2)
+p = Particula(x=0, y=0, vx=10, vy=10, massa=2)
 
 # Aplicando uma força de 4N na direção x e 0N na direção y, por 1 segundo
 p.newton(fx=4, fy=0, dt=1)
@@ -93,14 +93,14 @@ traj_x = [p.x]
 traj_y = [p.y]
 
 # Simula 20 passos de tempo aplicando uma força constante de 4N em x
-for _ in range(20):
+for _ in range(1000):
     p.newton(fx=4, fy=0, dt=1)  # força constante em x, nenhuma em y
     traj_x.append(p.x)
     traj_y.append(p.y)
 
 # ===== Gráfico da trajetória =====
 
-plt.figure(figsize=(8, 5))
+plt.figure(figsize=(18, 10))
 plt.plot(traj_x, traj_y, marker='o', linestyle='-')
 plt.title("Trajetória da Partícula")
 plt.xlabel("Posição X")
