@@ -47,7 +47,7 @@ b4 = np.zeros((1, output_size))
 
 # Treinamento
 epochs = 10000
-lr = 0.1
+lr = 0.05
 loss_history = []  # <-- Armazena a perda
 
 for epoch in range(epochs):
