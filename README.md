@@ -1,4 +1,4 @@
-# 🧠📘 FisComp - Física Computacional +++=+++
+# 📘 FisComp - Física Computacional +++=+++
 
 Bem-vindo ao **FisComp**! Este repositório contém projetos educacionais desenvolvidos em **Python**, combinando:
 
