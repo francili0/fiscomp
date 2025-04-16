@@ -12,7 +12,7 @@ def grad_U(x, y):
     return dU_dx, dU_dy
 
 # Hiperparâmetros
-alpha = 0.1           # Taxa de aprendizado (experimente diferentes valores!)
+alpha = 0.05           # Taxa de aprendizado (experimente diferentes valores!)
 max_iter = 200        # Número máximo de iterações
 epsilon = 1e-5        # Critério de parada
 
