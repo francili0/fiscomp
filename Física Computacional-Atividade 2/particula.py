@@ -1,50 +1,52 @@
-import matplotlib.pyplot as plt
-
 class Particula:
+ import matplotlib.pyplot as plt
+import math
+
+class particula():
     def __init__(self, x, y, vx, vy, massa):
-        self.x = x
-        self.y = y
-        self.vx = vx
-        self.vy = vy
+        self.x = [x]
+        self.y = [y]
+        self.vx = [vx]
+        self.vy = [vy]
         self.massa = massa
 
     def newton(self, fx, fy, dt):
-        ax = fx / self.massa
-        ay = fy / self.massa
-        self.vx += ax * dt
-        self.vy += ay * dt
-        self.x += self.vx * dt
-        self.y += self.vy * dt
+        if self.y[-1] >= 0:
+            ax = fx / self.massa
+            ay = fy / self.massa
+            self.x.append(self.x[-1] + self.vx[-1] * dt + 0.5 * ax * dt**2)
+            self.y.append(self.y[-1] + self.vy[-1] * dt + 0.5 * ay * dt**2)
+            self.vx.append(self.vx[-1] + ax * dt)
+            self.vy.append(self.vy[-1] + ay * dt)
 
-# Parâmetros iniciais
-massa = 1.0  # kg
-v0 = 20      # m/s
-angulo = 60  # graus
-g = 9.8      # m/s²
-dt = 0.01    # s
+# 🚀 Dados iniciais do lançamento
+massa = 1  # kg
+v0 = 20    # m/s
+angulo = 45  # graus
+g = 9.81   # m/s²
 
-# Componentes da velocidade inicial
-from math import radians, cos, sin
-v0x = v0 * cos(radians(angulo))
-v0y = v0 * sin(radians(angulo))
+# Convertendo ângulo para radianos e calculando vx0, vy0
+vx0 = v0 * math.cos(math.radians(angulo))
+vy0 = v0 * math.sin(math.radians(angulo))
 
-# Criar partícula
-p = Particula(0, 0, v0x, v0y, massa)
+# Criando a partícula
+p = particula(0, 0, vx0, vy0, massa)
 
-# Listas para armazenar os dados
-xs = []
-ys = []
+# ⏱ Parâmetros da simulação
+dt = 0.01
+tempo_total = 5  # s
+t = 0
 
-# Simulação
-while p.y >= 0:
-    p.newton(fx=0, fy=-massa * g, dt=dt)
-    xs.append(p.x)
-    ys.append(p.y)
+# 🧮 Loop de simulação
+while p.y[-1] >= 0:
+    p.newton(0, -massa * g, dt)
+    t += dt
 
-# Plotando a trajetória
-plt.plot(xs, ys)
-plt.title("Lançamento Oblíquo")
+# 📈 Gráfico da trajetória
+plt.plot(p.x, p.y)
+plt.title("Lançamento Oblíquo (com Newton)")
 plt.xlabel("x (m)")
 plt.ylabel("y (m)")
-plt.grid()
+plt.grid(True)
+plt.axis('equal')
 plt.show()
