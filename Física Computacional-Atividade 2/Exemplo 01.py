@@ -1,7 +1,8 @@
-ffrom particula import Particula
+from particula import Particula
 import matplotlib.pyplot as plt
 
 # Criar uma partícula com posição inicial (0, 0) e velocidade inicial (10, 10)
+#p = Particula(x=0, y=0, vx=10, vy=10, massa=1.0)
 p = Particula(x=0, y=0, vx=10, vy=10, massa=1.0)
 
 # Aplicar uma força constante (ex: gravidade) na direção y
