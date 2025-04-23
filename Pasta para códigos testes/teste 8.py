@@ -12,10 +12,10 @@ def grad_U(x, y):
     return dU_dx, dU_dy
 
 # Hiperparâmetros
-alpha = 0.5
+alpha = 0.1
 max_iter = 200
 epsilon = 1e-6
-x, y = 0.1, 0.1  # Posição inicial
+x, y = 2.5, 1.5  # Posição inicial
 
 # Armazenar trajetória
 xs, ys, us = [x], [y], [U(x, y)]
@@ -35,7 +35,7 @@ for _ in range(max_iter):
 else:
     print("Máximo de iterações atingido.")
 
-# Gráfico (a): Contorno com trajetória
+# Gráfico de contorno com trajetória e setas
 x_vals = np.linspace(-5, 5, 400)
 y_vals = np.linspace(-5, 5, 400)
 X, Y = np.meshgrid(x_vals, y_vals)
@@ -44,38 +44,28 @@ Z = U(X, Y)
 plt.figure(figsize=(8, 6))
 contour = plt.pcolormesh(X, Y, Z, shading='auto', cmap='viridis')
 plt.colorbar(contour)
+
+# Trajetória
 plt.plot(xs, ys, 'r--o', label='Trajetória')
-plt.title('Gradiente Descendente - Trajetória sobre Contorno de U(x, y)')
+
+# Adiciona setas (vetores) na trajetória
+for i in range(len(xs) - 1):
+    dx = xs[i+1] - xs[i]
+    dy = ys[i+1] - ys[i]
+    plt.quiver(xs[i], ys[i], dx, dy, angles='xy', scale_units='xy', scale=1, color='white', width=0.003)
+
+plt.title('Gradiente Descendente - Trajetória com Vetores')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.grid(True)
 plt.show()
 
-# Gráfico (b): Valor de U ao longo das iterações
+# Gráfico do valor de U por iteração
 plt.figure(figsize=(6, 3))
 plt.plot(us, 'b-o')
 plt.title('Valor de U(x, y) por Iteração (Epoch)')
 plt.xlabel('Iteração')
 plt.ylabel('U(x, y)')
 plt.grid(True)
-plt.show()
-
-# Malha para gráfico 3D
-x_vals = np.linspace(-5, 5, 200)
-y_vals = np.linspace(-5, 5, 200)
-X, Y = np.meshgrid(x_vals, y_vals)
-Z = U(X, Y)
-
-# Gráfico 3D
-fig = plt.figure(figsize=(10, 6))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.7)
-ax.plot(xs, ys, us, 'r.-', label='Trajetória do gradiente', linewidth=2)
-ax.set_title('Gradiente Descendente em 3D')
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('U(x, y)')
-ax.legend()
-plt.tight_layout()
 plt.show()
