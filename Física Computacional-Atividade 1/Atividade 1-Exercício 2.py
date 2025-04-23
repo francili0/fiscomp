@@ -26,7 +26,7 @@ for _ in range(epochs):
     y_vals.append(U(x))
 
 # Curva da função
-x_curve = np.linspace(-2.5, 2.5, 500)
+x_curve = np.linspace(-5.0, 5.0, 500)
 y_curve = U(x_curve)
 
 # Plot
