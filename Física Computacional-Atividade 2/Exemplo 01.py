@@ -25,9 +25,34 @@ while t <= 2.0:  # Simulando por 2 segundos
     
     t += dt
 
+
+
+
 # Plotar a trajetória da partícula
 plt.plot(xs, ys, marker='o')
 plt.title("Trajetória da Partícula")
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.grid(True)
+plt.show()
+
+
+
+while True:
+    tempos.append(t)
+    xs.append(p.x)
+    ys.append(p.y)
+
+    p.newton(fx, fy, dt)
+    t += dt
+
+    # Parar quando a partícula atinge o solo (y <= 0)
+    if p.y <= 0:
+        break
+
+# Plotar a trajetória
+plt.plot(xs, ys, marker='o')
+plt.title("Trajetória da Partícula (até atingir o solo)")
 plt.xlabel("x (m)")
 plt.ylabel("y (m)")
 plt.grid(True)
