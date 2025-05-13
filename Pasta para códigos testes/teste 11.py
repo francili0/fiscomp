@@ -5,13 +5,13 @@ from sklearn.neural_network import MLPRegressor
 # 1. Generate Training Data
 np.random.seed(42)  # for reproducibility
 num_samples = 100
-angles_train = np.random.uniform(0, 6 * np.pi, num_samples).reshape(-1, 1)  # Reshape to (n_samples, n_features)
+angles_train = np.random.uniform(0, 4 * np.pi, num_samples).reshape(-1, 1)  # Reshape to (n_samples, n_features)
 #1.Alterar a função alvo (função que a rede deve aprender)
-sin_values_train = np.sin(angles_train)
+#sin_values_train = np.sin(angles_train)
 
 
 # Função cosseno
-#sin_values_train = np.cos(angles_train)
+sin_values_train = np.cos(angles_train)
 
 # Função quadrada
 #sin_values_train = angles_train **2
@@ -24,10 +24,10 @@ sin_values_train = np.sin(angles_train)
 
 
 # Menos ruído
-#noise = np.random.normal(0, 0.01, sin_values_train.shape)
+noise = np.random.normal(0, 0.01, sin_values_train.shape)
 
 # Sem ruído (problema mais fácil)
-noise = 0
+#noise = 0
 
 #noise = np.random.normal(0, 0.1, sin_values_train.shape)
 #sin_values_train += noise
