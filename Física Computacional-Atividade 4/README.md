@@ -31,4 +31,4 @@ Imagine que você tem dados de um oscilador (tipo uma mola), mas não sabe a fre
 1. Aprender a resolver a equação do oscilador;  
 2. E descobrir quais são os parâmetros físicos (frequência, atrito) que melhor explicam os dados.
 
-T(t) = 25 + (T_0 - 25)\,\mathrm{e}^{-0.005\,t}
+
