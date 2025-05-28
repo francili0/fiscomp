@@ -7,7 +7,7 @@ r = 0.005             # constante de resfriamento [1/s]
 T_amb = 25            # temperatura ambiente [°C]
 T0 = 90               # temperatura inicial do café [°C]
 t_span = (0, 5000)    # intervalo de tempo em segundos
-t_eval = np.linspace(*t_span, 300)  # pontos de avaliação
+t_eval = np.linspace(*t_span, 1000)  # pontos de avaliação
 
 # Definindo a EDO
 def dTdt(t, T):
