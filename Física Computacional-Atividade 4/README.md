@@ -1,5 +1,7 @@
 Física Computacional-Atividade 4
+
 Redes Neurais Informadas por Física (PINNs)
+
 O que são PINNs?
 As PINNs (do inglês Physics-Informed Neural Networks) são um tipo especial de rede neural que usa as leis da física no seu aprendizado, e não apenas dados como uma rede tradicional.
 
