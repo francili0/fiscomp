@@ -30,7 +30,7 @@ Utilizou-se o `MLPRegressor` com uma arquitetura de 3 camadas ocultas, cada uma 
 
 **(Resultados Visuais - Scikit-learn)**
 * **Seno, Cosseno, Tangente:**
-    * ![[Física Computacional-Atividade 3/img/img_pytorch_derivadas_v1.png]]
+    * ![Plot das funções Seno, Cosseno e Tangente](/img/img_sklearn_interpolação_seno_coseno_tangente.png)
     * *Comentário:* As interpolações para seno e cosseno foram precisas. Para a tangente, a remoção de valores próximos às assíntotas permitiu um bom ajuste nas regiões contínuas.
 * **Função sinc(x):**
     * ![[img/img_sklearn_interpolação_função_sync(x).png]]
