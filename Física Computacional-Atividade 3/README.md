@@ -30,28 +30,38 @@ Utilizou-se o `MLPRegressor` com uma arquitetura de 3 camadas ocultas, cada uma 
 
 **(Resultados Visuais - Scikit-learn)**
 * **Seno, Cosseno, Tangente:**
-    * ![Plot das funções Seno, Cosseno e Tangente](./img/img_sklearn_interpolação_seno_coseno_tangente.png)
+    * ![Plot das funções Seno, Cosseno e Tangente via Sklearn](./img/img_sklearn_interpolação_seno_coseno_tangente.png)
     * *Comentário:* As interpolações para seno e cosseno foram precisas. Para a tangente, a remoção de valores próximos às assíntotas permitiu um bom ajuste nas regiões contínuas.
+ 
+
 * **Função sinc(x):**
-    * ![[img/img_sklearn_interpolação_função_sync(x).png]]
+    * ![Plot da função Sync via Sklearn](./img/img_sklearn_interpolação_função_sync(x).png])
     * *Comentário:* A rede scikit-learn modelou bem as características da função sinc.
+ 
+
 * **Função Gaussiana:**
-    * ![[img_sklearn_interpolação_função_gaussiana.png]]
+    * ![Plot da função Gaussiana via Sklearn](./img_sklearn_interpolação_função_gaussiana.png)
     * *Comentário:* A aproximação da função Gaussiana foi excelente.
+
 
 ### 3.2. Implementação com PyTorch
 Uma classe `MLP` customizada foi definida, com arquitetura e hiperparâmetros similares aos do scikit-learn para permitir uma comparação direta.
 
 **(Resultados Visuais - PyTorch)**
 * **Seno, Cosseno, Tangente:**
-    * ![[img_pytorch_interpolação_seno_coseno_tangente.png]]
+    * ![Plot das funções Seno, Cosseno e Tangente via Pytorch](./img_pytorch_interpolação_seno_coseno_tangente.png)
     * *Comentário:* Os resultados do PyTorch para a interpolação dessas funções foram visualmente indistinguíveis dos obtidos com scikit-learn.
+ 
+
 * **Função sinc(x):**
-    * ![[img_pytorch_interpolação_função_sync(x).png]]
+    * ![Plot da função Sync via Pytorch](./img_pytorch_interpolação_função_sync(x).png)
     * *Comentário:* A interpolação da função sinc com PyTorch também demonstrou alta fidelidade.
+ 
+
 * **Função Gaussiana:**
-    * ![[img_pytorch_interpolação_função_gaussiana.png]]
+    * ![Plot da função Gaussiana via Pytorch](./img_pytorch_interpolação_função_gaussiana.png)
     * *Comentário:* A função Gaussiana foi igualmente bem interpolada pela rede PyTorch.
+
 
 ### 3.3. Comparativo (Interpolação)
 Para as tarefas de interpolação, tanto o Scikit-learn quanto o PyTorch produziram resultados de alta qualidade e visualmente comparáveis com arquiteturas simples. O PyTorch introduz uma maior verbosidade na definição do modelo e do loop de treino, mas oferece flexibilidade que se torna mais vantajosa em problemas mais complexos.
@@ -65,8 +75,9 @@ Foi utilizado o `MLPRegressor` com uma arquitetura mais profunda (10 camadas ocu
 
 **(Resultados Visuais - Scikit-learn - Derivadas)**
 * **Teste com sin(πx), cos(πx), x²:**
-    * ![[img_sklearn_derivadas.png]]
+    * ![Implementação das Derivadas via Sklearn](./img_sklearn_derivadas.png)
     * *Comentário:* A rede scikit-learn conseguiu aprender a tendência linear da derivada de x². Para as funções trigonométricas, houve uma tentativa de seguir a forma ondulatória, mas com erros significativos de fase e, principalmente, de amplitude (previsões "achatadas").
+
 
 ### 4.2. Implementação com PyTorch (com Otimizações e GPU)
 Foi definida uma classe `MLP_Derivadas` customizada. O processo de treinamento foi iterativamente melhorado:
@@ -78,13 +89,15 @@ Foi definida uma classe `MLP_Derivadas` customizada. O processo de treinamento f
 - Aplicação de `gradient clipping`.
 - Treinamento realizado em GPU (NVIDIA GeForce RTX 3050) para viabilizar os longos tempos de treinamento.
 
+
 **(Resultados Visuais - PyTorch - Derivadas Otimizadas)**
 * **Teste com sin(πx), cos(πx), x²:**
-    * ![[img_pytorch_derivadas_v3.png]]
+    * ![Resultados com Código Otimizado](./img_pytorch_derivadas_v3.png)
     * *Comentário:* As melhorias implementadas resultaram em um avanço substancial. A derivada de x² foi prevista com excelente precisão. Mais notavelmente, para as funções sin(πx) e cos(πx), as derivadas previstas agora acompanham muito bem a fase e, crucialmente, a **amplitude** das derivadas reais, embora pequenas discrepâncias e suavizações ainda existam.
 * **Curvas de Perda e Taxa de Aprendizado:**
-    * ![[img_pytorch_taxa_aprendizagem_derivadas_v3.png]]
+    * ![Taxa de Aprendizagem](./img_pytorch_taxa_aprendizagem_derivadas_v3.png)
     * *Comentário:* As curvas mostram uma diminuição consistente da perda de treino e teste (polinômios) para valores baixos (MSE ~0.001-0.002). A perda de teste acompanha de perto a de treino, indicando boa generalização dentro do domínio dos polinômios. O gráfico da taxa de aprendizado confirma a ativação do scheduler, que reduziu o LR, auxiliando na convergência fina do modelo.
+
 
 ### 4.3. Comparativo e Desafios (Cálculo de Derivadas)
 A tarefa de aprender o operador de diferenciação é inerentemente mais complexa que a interpolação.
