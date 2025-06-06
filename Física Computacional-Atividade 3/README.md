@@ -33,7 +33,7 @@ Utilizou-se o `MLPRegressor` com uma arquitetura de 3 camadas ocultas, cada uma 
     * ![[img_sklearn_interpolação_seno_coseno_tangente.png]]
     * *Comentário:* As interpolações para seno e cosseno foram precisas. Para a tangente, a remoção de valores próximos às assíntotas permitiu um bom ajuste nas regiões contínuas.
 * **Função sinc(x):**
-    * ![[img_sklearn_interpolação_função_sync(x).png]]
+    * ![[img/img_sklearn_interpolação_função_sync(x).png]]
     * *Comentário:* A rede scikit-learn modelou bem as características da função sinc.
 * **Função Gaussiana:**
     * ![[img_sklearn_interpolação_função_gaussiana.png]]
