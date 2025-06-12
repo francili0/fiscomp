@@ -1,4 +1,4 @@
-Relatório da Atividade 4: Redes Neurais Informadas por Física (PINNs)
+# Atividade 4: Redes Neurais Informadas por Física (PINNs)
 
 ## Resumo
 
@@ -15,9 +15,9 @@ Este trabalho explora o uso de Redes Neurais Informadas pela Física (PINNs) par
 ### Passo 1 e 2: Solução Analítica e Numérica (RK4)
 
 A EDO do resfriamento é dada por:
-$$ \frac{dT}{dt} = r(T_{amb} - T) $$
+$\frac{dT}{dt} = r(T_{amb} - T)$
 A solução analítica para esta equação, com uma temperatura inicial $T_0$, é:
-$$ T(t) = T_{amb} + (T_0 - T_{amb}) e^{-rt} $$
+$T(t) = T_{amb} + (T_0 - T_{amb}) e^{-rt}$
 Para validar nossas implementações, comparamos a solução analítica com uma solução numérica de alta precisão obtida pelo método de Runge-Kutta (via `scipy.integrate.solve_ivp`).
 
 **Resultado:**

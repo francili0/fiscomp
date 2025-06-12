@@ -1,4 +1,4 @@
-# Relatório da Atividade 3: Interpolação de Funções e Cálculo de Derivadas com Redes Neurais
+# Atividade 3: Interpolação de Funções e Cálculo de Derivadas com Redes Neurais
 
 ## 1. Introdução
 
