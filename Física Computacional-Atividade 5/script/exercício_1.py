@@ -25,7 +25,7 @@ for i in range(3): #Mostra as 3 bandas mais baixas
 
 plt.axvline(-np.pi, color='gray',linestyle='--', linewidth=0.8)
 plt.axvline(np.pi, color='gray', linestyle='--',linewidth=0.8)
-plt.title("Abertura de gap na borda da 1ª zona de Brillouin(α=0.1)")
+plt.title("Abertura de gap na borda da 1ª zona de Brillouin(α=10)")
 plt.xlabel("$k$")
 plt.ylabel("Energia")
 plt.legend()
