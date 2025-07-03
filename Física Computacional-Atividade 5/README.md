@@ -8,11 +8,11 @@ Este projeto simula a estrutura de bandas de um elétron livre sujeito a um pote
 
 Segundo o teorema de Bloch, a função de onda de um elétron em um potencial periódico \( V(x + R) = V(x) \) pode ser escrita como:
 
-$$\[
+$\
 \psi_k(x) = e^{ikx} u_k(x)
-\]$$
+\$
 
-com \( u_k(x) \) sendo uma função periódica com o mesmo período do potencial. Expandindo \( u_k(x) \) em uma base de ondas planas:
+com $\ u_k(x) \$ sendo uma função periódica com o mesmo período do potencial. Expandindo \( u_k(x) \) em uma base de ondas planas:
 
 \[
 u_k(x) = \sum_G c_{k-G} e^{iGx}
