@@ -10,7 +10,7 @@ Segundo o teorema de Bloch, a função de onda de um elétron em um potencial pe
 
 $u_k(x) = \sum_G c(k-G) e^{iGx}$
 
-Substituindo essa forma na equação de Schrödinger, obtemos uma equação matricial para os coeficientes $c_{k-G}$, cuja diagonalização fornece as **bandas de energia** $E_n(k)$.
+Substituindo essa forma na equação de Schrödinger, obtemos uma equação matricial para os coeficientes $c(k-G)$, cuja diagonalização fornece as **bandas de energia** $E_n(k)$.
 
 Neste projeto, considera-se um potencial periódico do tipo:
 
