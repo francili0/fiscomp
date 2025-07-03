@@ -48,3 +48,4 @@ O script plota as três primeiras bandas de energia em função do vetor de onda
 - Os autovalores são calculados para cada valor de \( k \), formando as curvas \( E_n(k) \).
 
 
+![Imagem 5](./img/img_1.png)
