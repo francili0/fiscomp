@@ -14,7 +14,7 @@ Substituindo essa forma na equação de Schrödinger, obtemos uma equação matr
 
 Neste projeto, considera-se um potencial periódico do tipo:
 
-$V(x) = \sum_G V_G e^{iGx}, \quad \text{com } V_G = \alpha \text{ constante}$
+$V(x) = \sum_G V_G e^{iGx}, \quad \text{com } V_G = \alpha \text{ constante}$.
 
 ---
 
