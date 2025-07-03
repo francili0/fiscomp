@@ -6,15 +6,9 @@ Este projeto simula a estrutura de bandas de um elétron livre sujeito a um pote
 
 ## 🧠 Contexto Físico
 
-Segundo o teorema de Bloch, a função de onda de um elétron em um potencial periódico \( V(x + R) = V(x) \) pode ser escrita como:
+Segundo o teorema de Bloch, a função de onda de um elétron em um potencial periódico \( V(x + R) = V(x) \) pode ser escrita como: $\psi_k(x) = e^{ikx} u_k(x)\$, com $\ u_k(x)\$ sendo uma função periódica com o mesmo período do potencial. Expandindo $\u_k(x)\$ em uma base de ondas planas:
 
-$\psi_k(x) = e^{ikx} u_k(x)\$
-
-com $\ u_k(x) \$ sendo uma função periódica com o mesmo período do potencial. Expandindo \( u_k(x) \) em uma base de ondas planas:
-
-\[
-u_k(x) = \sum_G c_{k-G} e^{iGx}
-\]
+$\u_k(x) = \sum_G c_{k-G} e^{iGx}\$
 
 Substituindo essa forma na equação de Schrödinger, obtemos uma equação matricial para os coeficientes \( c_{k-G} \), cuja diagonalização fornece as **bandas de energia** \( E_n(k) \).
 
